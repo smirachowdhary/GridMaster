@@ -1,0 +1,225 @@
+/* Created with the help of Chat GPT */
+
+/* Basic Layout */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Container for the entire game */
+#game-container {
+    width: 95%; /* Increase width to fill more space */
+    max-width: 800px; /* Increase max-width */
+}
+
+/* General Button Styles */
+button {
+    background-color: #333;
+    color: white;
+    font-size: 24px; /* Increase font size for buttons */
+    padding: 20px 40px; /* Increase padding */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Start Screen */
+#start-screen {
+    display: block;
+}
+
+h1 {
+    color: white;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Increase shadow blur */
+    font-size: 96px; /* Make the title bigger */
+    margin-bottom: 100px; /* Increase margin for spacing */
+}
+
+/* Start Button Cyan */
+#start-button {
+    background-color: #00FFFF; /* Cyan background */
+    color: black; /* Black text */
+    font-size: 30px; /* Larger font size */
+    padding: 25px 50px; /* Increase padding */
+}
+
+/* Emoji Selection Screens */
+#emoji-selection-screen1, #emoji-selection-screen2 {
+    display: none;
+}
+
+h2 {
+    color: #00FFFF;
+    font-size: 40px; /* Increase font size for section headings */
+    margin-bottom: 30px;
+}
+
+.emoji-display {
+    font-size: 80px; /* Increase emoji display size */
+    margin: 30px;
+}
+
+#generate-emoji1, #generate-emoji2 {
+    background-color: #00FFFF;
+    color: black;
+    border: none;
+    padding: 15px 30px; /* Increase padding */
+    font-size: 24px; /* Increase font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#generate-emoji1:hover, #generate-emoji2:hover {
+    background-color: #00bfbf;
+}
+
+/* Next Button */
+#next-button-1, #next-button-2 {
+    background-color: #00FFFF;
+    color: black;
+    border: none;
+    padding: 15px 30px; /* Increase padding */
+    font-size: 24px; /* Increase font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+#next-button-1:hover, #next-button-2:hover {
+    background-color: #00bfbf;
+}
+
+/* Game Screen */
+#game-screen {
+    display: none;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* Increase cell size */
+    grid-template-rows: repeat(3, 150px); /* Increase cell size */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cell {
+    width: 150px; /* Increase width */
+    height: 150px; /* Increase height */
+    border: 3px solid #00FFFF; /* Increase border thickness */
+    font-size: 60px; /* Increase font size for the emojis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #444;
+}
+
+#status {
+    margin-top: 30px;
+    font-size: 30px; /* Increase status message font size */
+    color: #00FFFF;
+}
+
+/* End Screen */
+#end-screen {
+    display: none;
+}
+
+#end-message {
+    font-size: 40px; /* Increase end message font size */
+    color: #00FFFF;
+    margin-bottom: 40px;
+}
+
+#play-again-button {
+    background-color: #00FFFF;
+    color: black;
+    padding: 20px 40px; /* Increase padding */
+    font-size: 24px; /* Increase font size */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#play-again-button:hover {
+    background-color: #00bfbf;
+}
+
+/* General Flexbox Layout Adjustments */
+#game-container {
+    text-align: center;
+}
+
+/* Responsive Layout Adjustments */
+@media screen and (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 120px); /* Adjust cell size for smaller screens */
+        grid-template-rows: repeat(3, 120px); /* Adjust cell size for smaller screens */
+    }
+
+    .cell {
+        width: 120px; /* Adjust width for smaller screens */
+        height: 120px; /* Adjust height for smaller screens */
+        font-size: 50px; /* Adjust font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 48px; /* Adjust title font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 30px; /* Adjust heading font size for smaller screens */
+    }
+
+    #status {
+        font-size: 24px; /* Adjust status message font size for smaller screens */
+    }
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 5px 0;
+    text-align: center;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#navbar-title {
+    color: #00FFFF;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+}
+
